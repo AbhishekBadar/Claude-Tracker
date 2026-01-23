@@ -2,6 +2,10 @@
 
 Minimal macOS menu bar app that shows Claude usage for multiple profiles.
 
+<img width="312" height="363" alt="Screenshot 2026-01-23 at 8 23 08 PM" src="https://github.com/user-attachments/assets/7448748a-b4ba-4957-abff-bc70687bd98b" />
+<img width="316" height="364" alt="Screenshot 2026-01-23 at 8 23 18 PM" src="https://github.com/user-attachments/assets/f9a1c0f9-a3d8-4e1d-ad4b-2cd9a35a4475" />
+
+
 ## Build and Run (Xcode)
 
 1. Clone the repo
