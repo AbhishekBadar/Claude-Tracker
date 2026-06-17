@@ -27,6 +27,38 @@ Minimal macOS menu bar app that shows Claude usage for multiple profiles.
    - Find `Claude Tracker.app` in `Products`
    - Drag it into `/Applications`
 
+## Download & Install (no Xcode needed)
+
+1. Grab `Claude-Tracker.dmg` (or `Claude-Tracker.zip`) from the build.
+2. Open the `.dmg` and drag **Claude Tracker** into **Applications**.
+3. The first time you open it, macOS will warn that it's from an
+   unidentified developer (the app is signed but not notarized by Apple).
+   **Right-click the app → Open → Open** to launch it anyway. You only do
+   this once.
+
+   If it still refuses, clear the download quarantine flag:
+   ```bash
+   xattr -dr com.apple.quarantine "/Applications/Claude Tracker.app"
+   ```
+
+A menu bar icon appears (top-right). There is no Dock icon — quit from the
+**Manage** tab.
+
+## Build a shareable copy yourself
+
+This produces a universal (Apple Silicon + Intel) app, a `.dmg`, and a `.zip`
+in `./dist`, using only the Xcode **Command Line Tools** — full Xcode is not
+required:
+
+```bash
+./build.sh
+```
+
+> **Sharing more widely:** the build is *ad-hoc signed*, so recipients must do
+> the right-click → Open step above. To ship without that warning you need an
+> Apple Developer account ($99/yr) to sign with a Developer ID certificate and
+> notarize the app.
+
 ## Usage
 
 - Click the menu bar icon to open the popup.
